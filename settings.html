@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="./src/assets/images/Logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Talent Academy</title>
+  </head>
+
+  <body class="bg-white">
+    <div id="header-placeholder"></div>
+
+    <main class="bg-gray-50 py-24 sm:py-32">
+      <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+        <h2 class="text-center text-base font-semibold text-indigo-600">
+          Talent Academy Project
+        </h2>
+        <p
+          class="mx-auto mt-2 max-w-xl text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl"
+        >
+          AI-gestuurde Matching voor Stages in Noord-Holland
+        </p>
+        <p class="mx-auto mt-6 max-w-3xl text-center text-gray-700">
+          Deze prototype helpt bij het automatisch koppelen van studenten aan
+          stageplaatsen op basis van voorkeuren, vaardigheden en leerdoelen. Via
+          slimme vragen en AI-categorisatie bouwen we een profiel op dat de
+          matching vereenvoudigt.
+        </p>
+
+        <div class="mt-16 grid gap-4 lg:grid-cols-3 lg:grid-rows-2">
+          <!-- Introductieblok -->
+          <div class="relative lg:row-span-2">
+            <div
+              class="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem]"
+            ></div>
+            <div
+              class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]"
+            >
+              <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
+                <p
+                  class="text-lg font-medium tracking-tight text-gray-950 max-lg:text-center"
+                >
+                  Over dit prototype
+                </p>
+                <p
+                  class="mt-2 max-w-lg text-sm text-gray-600 max-lg:text-center"
+                >
+                  Studenten beantwoorden een korte vragenlijst. Het systeem
+                  koppelt hun profiel via AI aan relevante stages, wat het
+                  proces voor bedrijven én scholen vereenvoudigt.
+                </p>
+              </div>
+              <div
+                class="flex flex-1 items-center justify-center px-8 py-6 sm:px-10 lg:pb-2"
+              >
+                <img
+                  class="w-full max-w-xs"
+                  src="https://tailwindcss.com/plus-assets/img/component-images/bento-03-performance.png"
+                  alt="Prototype"
+                />
+              </div>
+            </div>
+            <div
+              class="pointer-events-none absolute inset-px rounded-lg shadow-sm ring-1 ring-black/5 lg:rounded-l-[2rem]"
+            ></div>
+          </div>
+
+          <!-- API Key Panel -->
+          <div class="relative lg:row-span-2 lg:col-start-2 lg:col-span-2">
+            <div
+              class="absolute inset-px rounded-lg bg-white lg:rounded-r-[2rem]"
+            ></div>
+            <div
+              class="relative flex h-full flex-col justify-between overflow-hidden rounded-[calc(var(--radius-lg)+1px)] p-10"
+            >
+              <div>
+                <h3 class="text-lg font-medium text-gray-900 mb-4">
+                  🔑 API-sleutel toevoegen
+                </h3>
+                <p class="text-sm text-gray-600 mb-4">
+                  Vul hieronder je API-sleutel in om de matchingfunctionaliteit
+                  te activeren. De sleutel wordt veilig lokaal opgeslagen in je
+                  browser.
+                </p>
+                <form id="apiForm" class="flex flex-col sm:flex-row gap-4">
+                  <input
+                    type="text"
+                    id="apiKeyInput"
+                    placeholder="Voer je API-sleutel in..."
+                    class="w-full rounded-md border border-gray-300 px-4 py-2 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                  />
+                  <button
+                    type="submit"
+                    class="rounded-md bg-indigo-600 px-5 py-2 text-white font-medium hover:bg-indigo-700 transition"
+                  >
+                    Opslaan
+                  </button>
+                </form>
+                <p id="saveMsg" class="mt-4 text-sm text-green-600 hidden">
+                  ✅ API-sleutel is opgeslagen.
+                </p>
+              </div>
+            </div>
+            <div
+              class="pointer-events-none absolute inset-px rounded-lg shadow-sm ring-1 ring-black/5 lg:rounded-r-[2rem]"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const form = document.getElementById("apiForm");
+      const input = document.getElementById("apiKeyInput");
+      const msg = document.getElementById("saveMsg");
+
+      window.addEventListener("DOMContentLoaded", () => {
+        const savedKey = localStorage.getItem("apiKey");
+        if (savedKey) input.value = savedKey;
+      });
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const key = input.value.trim();
+        if (key) {
+          localStorage.setItem("apiKey", key);
+          msg.classList.remove("hidden");
+        }
+      });
+    </script>
+
+    <script src="./src/main.js"></script>
+  </body>
+</html>

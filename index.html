@@ -11,19 +11,7 @@
 
   <body class="bg-white">
 
-    <header class="absolute inset-x-0 top-0 z-50">
-      <nav class="flex items-center justify-between p-6" aria-label="Global">
-        <div class="flex lg:flex-1">
-          <a href="#" class="p-1.5">
-            <span class="sr-only">Talent Academy</span>
-            <img class="h-24 w-auto" src="./src/assets/images/Logo.png" alt="Talent Academy" />
-          </a>
-        </div>
-        <div class="hidden lg:flex lg:flex-1 lg:justify-end pr-6">
-          <a href="./login.html" class="text-md font-semibold text-gray-900">Inloggen <span aria-hidden="true">&rarr;</span></a>
-        </div>
-      </nav>
-    </header>
+    <div id="header-placeholder"></div>
 
     <main class="flex flex-col justify-center items-center min-h-screen relative">
       <!-- Hero section -->
@@ -41,10 +29,12 @@
       </div>
 
       <!-- Background decoration -->
-      <div class="absolute inset-0 -z-10 transform-gpu overflow-hidden blur-3xl">
+      <div class="absolute inset-0 -z-10 transform-gpu overflow-hidden blur-3xl pt-32">
         <div class="relative left-1/2 aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#007BC1] to-[#7AC943] opacity-30 sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
       </div>
 
     </main>
+
+    <script src="./src/main.js"></script>
   </body>
 </html>

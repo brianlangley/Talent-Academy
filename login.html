@@ -1,101 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="../src/assets/images/Logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Talent Academy</title>
-  </head>
-  <body
-    class="bg-[#F9F9F7] mx-auto flex flex-col items-center justify-center h-screen py-12"
-  >
-    <header class="absolute inset-x-0 top-0 z-50 p-6">
-      <a
-        href="./index.html"
-        class="inline-flex items-center justify-center rounded-md bg-gray-200 px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-300 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gray-400"
-      >
-        ← Terug naar Home
-      </a>
-    </header>
-    <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:p-8">
-      <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-        <img
-          class="mx-auto lg:h-82 h-60 w-auto"
-          src="../src/assets/images/Logo.png"
-          alt="Talent Academy"
-        />
-        <h2 class="text-center text-2xl font-bold tracking-tight text-gray-900">
-          Inloggen op je account
-        </h2>
-      </div>
 
-      <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-        <form class="space-y-6" action="#" method="POST">
-          <div>
-            <label for="email" class="block text-sm font-medium text-gray-900">
-              Email address
-            </label>
-            <div class="mt-2">
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="student@email.com"
-                autocomplete="email"
-                required
-                class="block w-full rounded-md bg-white px-3 py-2 text-gray-900 border border-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-[#007BC1] focus:outline-none"
-              />
-            </div>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="../src/assets/images/Logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Talent Academy</title>
+</head>
 
-          <div>
-            <div class="flex items-center justify-between">
-              <label
-                for="password"
-                class="block text-sm font-medium text-gray-900"
-              >
-                Wachtwoord
-              </label>
-              <div class="text-sm">
-                <a
-                  href="#"
-                  class="font-semibold text-[#007BC1] hover:text-[#00A8A8]"
-                >
-                  Wachtwoord vergeten?
-                </a>
-              </div>
-            </div>
-            <div class="mt-2">
-              <input
-                type="password"
-                name="password"
-                placeholder="Vul hier je wachtwoord in"
-                id="password"
-                autocomplete="current-password"
-                required
-                class="block w-full rounded-md bg-white px-3 py-2 text-gray-900 border border-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-[#007BC1] focus:outline-none"
-              />
-            </div>
-          </div>
+<body class="bg-white mx-auto flex flex-col items-center justify-center h-screen py-12">
 
-          <div>
-            <button
-              type="submit"
-              class="flex w-full justify-center rounded-md bg-gradient-to-r from-[#007BC1] to-[#7AC943] px-3 py-2 text-sm font-semibold text-white shadow-sm hover:from-[#006aa6] hover:to-[#65b62f] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#00A8A8]"
-            >
-              Login
-            </button>
-            <div class="mt-6 text-center">
-              <a
-                href="./signup.html"
-                class="font-semibold text-[#007BC1] hover:text-[#00A8A8]"
-                >Geen account? Maak er een aan</a
-              >
-            </div>
-          </div>
-        </form>
-      </div>
+  <div id="header-placeholder"></div>
+
+  <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:p-8">
+    <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+      <img class="mx-auto lg:h-60 h-48 w-auto" src="../src/assets/images/Logo.png" alt="Talent Academy" />
+      <h2 class="text-center text-2xl font-bold tracking-tight text-gray-900">
+        Inloggen op je account
+      </h2>
     </div>
-  </body>
+
+    <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+      <form class="space-y-6" action="#" method="POST">
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-900">
+            Email address
+          </label>
+          <div class="mt-2">
+            <input type="email" name="email" id="email" placeholder="student@email.com" autocomplete="email" required
+              class="block w-full rounded-md bg-white px-3 py-2 text-gray-900 border border-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-[#007BC1] focus:outline-none" />
+          </div>
+        </div>
+
+        <div>
+          <div class="flex items-center justify-between">
+            <label for="password" class="block text-sm font-medium text-gray-900">
+              Wachtwoord
+            </label>
+            <div class="text-sm">
+              <a href="#" class="font-semibold text-[#007BC1] hover:text-[#00A8A8]">
+                Wachtwoord vergeten?
+              </a>
+            </div>
+          </div>
+          <div class="mt-2">
+            <input type="password" name="password" placeholder="Vul hier je wachtwoord in" id="password"
+              autocomplete="current-password" required
+              class="block w-full rounded-md bg-white px-3 py-2 text-gray-900 border border-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-[#007BC1] focus:outline-none" />
+          </div>
+        </div>
+
+        <div>
+          <button type="submit"
+            class="flex w-full justify-center rounded-md bg-gradient-to-r from-[#007BC1] to-[#7AC943] px-3 py-2 text-sm font-semibold text-white shadow-sm hover:from-[#006aa6] hover:to-[#65b62f] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#00A8A8]">
+            Login
+          </button>
+          <div class="mt-6 text-center">
+            <a href="./signup.html" class="font-semibold text-[#007BC1] hover:text-[#00A8A8]">Geen account? Maak er een
+              aan</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="./src/main.js"></script>
+</body>
+
 </html>

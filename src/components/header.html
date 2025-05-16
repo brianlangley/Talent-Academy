@@ -1,0 +1,134 @@
+<header class="absolute inset-x-0 top-0 z-50 bg-white-50">
+  <nav class="flex items-center justify-between p-3" aria-label="Global">
+    <!-- Logo left (always visible) -->
+    <div class="flex flex-1 justify-start">
+      <a href="/index.html" class="flex items-center gap-2">
+        <span class="sr-only">Talent Academy Home</span>
+        <img
+          class="h-10 w-auto lg:h-12"
+          src="/src/assets/images/icon.png"
+          alt="Talent Academy Logo"
+        />
+      </a>
+    </div>
+
+    <!-- Centered anchors, hidden on small screens -->
+    <div class="hidden md:flex flex-1 justify-center gap-8">
+      <a
+        href="/index.html"
+        class="text-md font-semibold text-gray-900 hover:text-[#007BC1] transition-colors"
+        >Home</a
+      >
+      <a
+        href="/settings.html"
+        class="text-md font-semibold text-gray-900 hover:text-[#007BC1] transition-colors"
+        >Settings</a
+      >
+    </div>
+
+    <!-- Login right, hidden on small screens -->
+    <div class="hidden md:flex flex-1 justify-end space-x-4 px-4">
+      <a
+        href="/signup.html"
+        class="text-md font-semibold text-gray-900 hover:text-[#007BC1] transition-colors"
+        >Sign up</a
+      >
+      <a
+        href="./login.html"
+        class="text-md font-semibold text-gray-900 hover:text-[#007BC1] transition-colors"
+        >Inloggen</a
+      >
+    </div>
+
+    <!-- Hamburger button (only visible on small screens, right aligned) -->
+    <div class="flex md:hidden flex-1 justify-end">
+      <button
+        type="button"
+        id="mobile-menu-button"
+        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+      >
+        <span class="sr-only">Open main menu</span>
+        <svg
+          class="h-6 w-6"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Optional backdrop -->
+  <div
+    id="mobile-backdrop"
+    class="fixed inset-0 bg-black/30 z-40 hidden md:hidden"
+  ></div>
+
+  <!-- Mobile menu (logo visible at the top, only on mobile) -->
+  <div
+    id="mobile-menu"
+    class="md:hidden hidden fixed inset-0 z-50 bg-white px-6 py-6 overflow-y-auto ring-1 ring-gray-900/10"
+    role="dialog"
+    aria-modal="true"
+  >
+    <div class="flex items-center justify-between">
+      <a href="/index.html" class="flex items-center gap-2">
+        <span class="sr-only">Talent Academy Home</span>
+        <img
+          class="h-10 w-auto"
+          src="/src/assets/images/icon.png"
+          alt="Talent Academy Logo"
+        />
+      </a>
+      <button
+        type="button"
+        id="mobile-menu-close"
+        class="-m-2.5 rounded-md p-2.5 text-gray-700"
+      >
+        <span class="sr-only">Close menu</span>
+        <svg
+          class="h-6 w-6"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+    </div>
+    <div class="mt-6 flex flex-col gap-2">
+      <a
+        href="/index.html"
+        class="block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
+        >Home</a
+      >
+      <a
+        href="/settings.html"
+        class="text-md font-semibold text-gray-900 hover:text-[#007BC1] transition-colors"
+        >Settings</a
+      >
+      <a
+        href="/signup.html"
+        class="block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
+        >Sign up</a
+      >
+      <a
+        href="./login.html"
+        class="block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
+        >Inloggen</a
+      >
+    </div>
+  </div>
+</header>
