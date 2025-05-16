@@ -1,0 +1,13 @@
+:root {
+    --startColor: #007BC1;
+    --stopColor: #7AC943;
+  }
+  
+  svg {
+    filter: blur(50px);
+  }
+  
+  path {
+    cursor: pointer;
+  }
+  
