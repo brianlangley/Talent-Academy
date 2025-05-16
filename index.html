@@ -17,7 +17,7 @@
   <main class="flex flex-col justify-center items-center min-h-screen relative">
     <!-- Hero section -->
     <div class="mx-auto max-w-2xl py-24 sm:py-32 lg:py-40 text-center relative z-10">
-      <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+      <h1 class="text-4xl font-bold tracking-tight text-gray-800 sm:text-6xl">
         Verbind studenten, scholen en bedrijven
       </h1>
       <p class="mt-6 text-lg leading-8 text-gray-600">
@@ -33,16 +33,18 @@
 
     <!-- Background decoration -->
     <div class="absolute inset-0 -z-10 overflow-hidden">
-      <svg viewBox="0 0 200 200" class="w-[90vmin] h-[90vmin] mx-auto mt-32 blur-[80px]">
-        <defs>
-          <linearGradient id="gradient" gradientTransform="rotate(90)">
-            <stop id="gradientStop1" offset="0%" stop-color="var(--startColor)" />
-            <stop id="gradientStop2" offset="100%" stop-color="var(--stopColor)" />
-          </linearGradient>
-        </defs>
-        <path d="" fill="url(#gradient)"></path>
-      </svg>
-    </div>    
+      <div class="floating-svg w-[90vmin] h-[90vmin] mx-auto mt-32 blur-[80px]">
+        <svg viewBox="0 0 200 200" class="w-full h-full">
+          <defs>
+            <linearGradient id="gradient" gradientTransform="rotate(90)">
+              <stop id="gradientStop1" offset="0%" stop-color="var(--startColor)" />
+              <stop id="gradientStop2" offset="100%" stop-color="var(--stopColor)" />
+            </linearGradient>
+          </defs>
+          <path d="" fill="url(#gradient)"></path>
+        </svg>
+      </div>
+    </div>       
 
   </main>
 
